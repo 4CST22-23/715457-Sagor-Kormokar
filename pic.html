@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
+}
+.box{
+    position: relative;
+    width:50px ;
+    height: 50px;
+    transform-style: preserve-3d;
+    animation: animate 50s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+
+    }
+    
+}
+.box span{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100px; 
+ height: 100px;
+ transform-origin: center;
+ transform-style: preserve-3d;
+ transform: rotateY(calc(var(--i) *45deg)) translateZ(400px);
+ -webkit-box-reflect:below 0px linear-gradient(transparent, transparent,#0004) ;
+
+ 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+
+<div class="box">
+
+<span style="--i: 1"><img src="food1.jpeg" alt="#"></span>
+<span style="--i: 2"><img src="food2.jpeg" alt="#"></span>
+
+<span style="--i: 3"><img src="food3.jpeg" alt="#"></span>
+
+<span style="--i: 4"><img src="food4.jpeg" alt="#"></span>
+
+<span style="--i: 5"><img src="food5.jpeg" alt="#"></span>
+
+<span style="--i: 6"><img src="food 6.jpeg" alt="#"></span>
+
+<span style="--i: 7"><img src="food7.jpeg" alt="#"></span>
+
+<span style="--i: 8"><img src="food8.jpeg" alt="#"></span>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <center style="color: aliceblue;"> OUR FOOD Gallery</center>
+</body>
+</html>
